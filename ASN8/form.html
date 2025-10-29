@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Assignment 8 – Form (Accessible)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <h1>Assignment 8: Accessible Form</h1>
+    <p class="subtitle">Tab through: First name → Last name → Submit</p>
+  </header>
+
+  <nav class="site-nav" aria-label="Primary" role="navigation">
+    <ul class="link-list">
+      <li><a tabindex="1" href="https://www.columbusstate.edu/" target="_blank" rel="noopener">CSU website</a></li>
+      <li><a tabindex="2" href="https://www.w3.org/WAI/standards-guidelines/" target="_blank" rel="noopener">Web accessibility standards</a></li>
+      <li><a tabindex="3" href="https://responsivedesignchecker.com/" target="_blank" rel="noopener">Responsive design checker</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" class="site-main" role="main">
+    <form id="frm1" class="form-card" action="#" method="get">
+      <div class="form-row">
+        <label for="fname">First name:</label><br>
+        <input tabindex="1" type="text" id="fname" name="fname" value="John" autocomplete="given-name">
+      </div>
+      <div class="form-row">
+        <label for="lname">Last name:</label><br>
+        <input tabindex="2" type="text" id="lname" name="lname" value="Doe" autocomplete="family-name">
+      </div>
+      <div class="form-row">
+        <input tabindex="3" type="submit" value="Submit">
+      </div>
+    </form>
+  </main>
+
+  <aside class="site-aside">
+    <h2 class="visually-hidden">Logo</h2>
+    <object type="image/svg+xml" data="logo.svg" aria-label="Pixels the Cat Logo" class="logo-object"></object>
+    <p class="small">This page uses the same grid and media query, with a focusable form.</p>
+  </aside>
+
+  <footer class="site-footer" role="contentinfo">
+    <p><strong>Adam McDonald</strong> • Fall 2025</p>
+    <p><a href="index.html">Back to home</a></p>
+  </footer>
+</body>
+</html>
